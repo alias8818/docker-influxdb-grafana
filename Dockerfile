@@ -39,14 +39,14 @@ RUN rm /var/lib/apt/lists/* -vf \
     && mkdir -p /var/log/supervisor \
     && rm -rf .profile \
     # Install InfluxDB
-    && wget https://dl.influxdata.com/influxdb/releases/influxdb_${INFLUXDB_VERSION}_arm64.deb \
-    && dpkg -i influxdb_${INFLUXDB_VERSION}_arm64.deb && rm influxdb_${INFLUXDB_VERSION}_arm64.deb \
+    && wget https://dl.influxdata.com/influxdb/releases/influxdb_${INFLUXDB_VERSION}_armhf.deb \
+    && dpkg -i influxdb_${INFLUXDB_VERSION}_armhf.deb && rm influxdb_${INFLUXDB_VERSION}_armhf.deb \
     # Install Chronograf
-    && wget https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_arm64.deb \
-    && dpkg -i chronograf_${CHRONOGRAF_VERSION}_arm64.deb && rm chronograf_${CHRONOGRAF_VERSION}_arm64.deb \
+    && wget https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_armhf.deb \
+    && dpkg -i chronograf_${CHRONOGRAF_VERSION}_armhf.deb && rm chronograf_${CHRONOGRAF_VERSION}_armhf.deb \
     # Install Grafana
-    && wget https://dl.grafana.com/oss/release/grafana_${GRAFANA_VERSION}_arm64.deb \
-    && dpkg -i grafana_${GRAFANA_VERSION}_arm64.deb && rm grafana_${GRAFANA_VERSION}_arm64.deb \
+    && wget https://dl.grafana.com/oss/release/grafana_${GRAFANA_VERSION}_armhf.deb \
+    && dpkg -i grafana_${GRAFANA_VERSION}_armhf.deb && rm grafana_${GRAFANA_VERSION}_armhf.deb \
     # Cleanup
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
